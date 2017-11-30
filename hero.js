@@ -9,7 +9,7 @@ var Hero = function(name, health, favouriteFood){
 
 Hero.prototype = {
    talk: function(name){
-      return "I am " + this.name;
+     return "I am " + this.name;
    },
    addTasks: function(task){
      this.tasks.push(task)
@@ -19,7 +19,15 @@ Hero.prototype = {
    },
    viewTask: function(status){
      return _.filter(this.tasks, ["completed", status])
+   },
+   eat: function(food){
+     if(food === this.favouriteFood){
+       this.health += food.replenishValue;
+     }
+     else{
+       this.health += ((food.replenishValue) * 1.5);
+     }
    }
-}
+ }
 
 module.exports = Hero;
