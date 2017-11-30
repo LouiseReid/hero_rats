@@ -1,7 +1,6 @@
 {
   "name": "heroes_rats",
   "version": "1.0.0",
-  "description": "",
   "main": "hero.js",
   "scripts": {
     "test": "mocha specs"
@@ -10,5 +9,14 @@
   "license": "ISC",
   "dependencies": {
     "mocha": "^4.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smrr723/hero_rats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smrr723/hero_rats/issues"
+  },
+  "homepage": "https://github.com/smrr723/hero_rats#readme",
+  "description": ""
 }
