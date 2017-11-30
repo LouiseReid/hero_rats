@@ -1,3 +1,5 @@
+var _ = require("lodash")
+
 var Hero = function(name, health, favouriteFood){
    this.name = name;
    this.health = health;
@@ -8,6 +10,15 @@ var Hero = function(name, health, favouriteFood){
 Hero.prototype = {
    talk: function(name){
       return "I am " + this.name;
+   },
+   addTasks: function(task){
+     this.tasks.push(task)
+   },
+   sortTasks: function(property){
+     return _.sortBy(this.tasks, ["property"] )
+   },
+   viewTask: function(status){
+     return _.filter(this.tasks, ["completed", status])
    }
 }
 
