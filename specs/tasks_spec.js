@@ -23,7 +23,7 @@ describe("Task", function(){
    });
 
    it("should have complete status", function(){
-      assert.strictEqual(task.complete, false);
+      assert.strictEqual(task.completed, false);
    });
 
 
