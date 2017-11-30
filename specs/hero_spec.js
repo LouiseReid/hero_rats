@@ -1,12 +1,14 @@
 var assert = require("assert");
 var Hero = require("../hero.js")
 var Task = require("../task.js")
+var Food = require("../food.js");
 
 describe("Hero", function(){
   beforeEach(function(){
     hero = new Hero("Ryu", 100, "pizza");
     task1 = new Task("Defeat Sagat", 5, 10, "Food", false);
     task2 = new Task("Defeat Ken", 7, 9, "Money", true);
+    food = new Food("pizza", 10);
   });
 
   it("should have a name", function(){
@@ -35,6 +37,10 @@ describe("Hero", function(){
     hero.addTasks(task2);
     assert.deepStrictEqual(hero.viewTask(true),[task2])
     assert.deepStrictEqual(hero.viewTask(false),[task1])
-  })
+  });
+  it("should be able to eat", function(){
+    hero.eat(food);
+    assert.strictEqual(hero.health, 115);
+})
 
 })
