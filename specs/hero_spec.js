@@ -7,13 +7,13 @@ describe("Hero", function(){
   });
 
   it("should have a name", function(){
-    assert.strictEqual(this.name, "Ryu")
+    assert.strictEqual(hero.name, "Ryu")
   });
   it("should have health", function(){
-    assert.strictEqual(this.health, 100)
+    assert.strictEqual(hero.health, 100)
   });
   it("should have a favourite food", function(){
-    assert.strictEqual(this.favouriteFood, "pizza")
+    assert.strictEqual(hero.favouriteFood, "pizza")
   });
   it("can talk, saying its name", function(){
     assert.strictEqual(hero.talk(), "I am Ryu")

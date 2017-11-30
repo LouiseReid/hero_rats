@@ -11,4 +11,4 @@ Hero.prototype = {
    }
 }
 
-modules.exports = Hero;
+module.exports = Hero;
