@@ -21,11 +21,11 @@ Hero.prototype = {
      return _.filter(this.tasks, ["completed", status])
    },
    eat: function(food){
-     if(food === this.favouriteFood){
-       this.health += food.replenishValue;
+     if(food.name === this.favouriteFood){
+       this.health += ((food.replenishValue) * 1.5);
      }
      else{
-       this.health += ((food.replenishValue) * 1.5);
+       this.health += food.replenishValue;
      }
    }
  }
